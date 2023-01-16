@@ -1,0 +1,115 @@
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+
+    h1 {
+      color: #fff;
+      font-size: 56px;
+      line-height: 63px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
+
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+  color: #616161; 
+        font-size: 18px;
+        position: absolute;
+        margin-top: -40px;
+        left: -15px;
+        opacity: 1;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+  color: #616161; 
+        font-size: 18px;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 20px;
+        animation: fadeIn 1s 1.7s backwards;
+        opacity: 1;
+      }
+    }
+
+    img {
+      margin-left: 20px;
+      opacity: 0;
+      width: 32px;
+      height: auto;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+    }
+  }
+
+  h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .flat-button {
+    position: absolute;
+    background: transparent;
+    padding: 18px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 0px;
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 60%;
+      width: 40%;
+      left: 22px;
+      top: 8px;
+      background: #47039b93;
+      transform: skewX(30deg);
+      z-index: -1;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &:hover:before {
+      transform: skewX(0deg);
+      left: 51.4%;
+      top: 11px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 60%;
+      width: 40%;
+      left: 52%;
+      top: 13px;
+      background-color: #03adc095;
+      transform: skewX(30deg);
+      z-index: -1;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &:hover:after {
+      transform: skewX(0deg);
+      left: 11%;
+      top: 10px;
+    }
+  }
+}
+.box{
+  box-shadow: 0px 0px 12px #2a3cad;
+}

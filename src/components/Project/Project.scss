@@ -1,0 +1,93 @@
+.card {
+	background-color: #0c0814;
+	// background-color: #2f3235;
+	// color: #fff;
+}
+
+.card:before,
+.card:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+			#0000ff, #00ff00, #ffff00, #ff0000);
+	background-size: 450%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+	border-radius: 4px;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 400% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.card:hover::after {
+	filter: blur(25px);
+}
+
+.btn {
+	box-sizing: border-box;
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #08fdd8;
+	cursor: pointer;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	padding: 1.2em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #08fdd8;
+	border-radius: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: {
+		image: linear-gradient(95deg, #08fdd8 50%, transparent 50%);
+		position: 100%;
+		size: 400%;
+	}
+
+	transition: background 300ms ease-in-out;
+
+	&:hover {
+		background-position: 0;
+		border: 2px solid #08fdd8;
+		color:rgb(39, 36, 36) ;
+	}
+
+
+	&:focus {
+		color: rgb(39, 36, 36);
+		outline: 0;
+	}
+}
+
+.card-title {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	color: #fff;
+}
+.card-text {
+	font-size: 15px;
+	font-family: Poppins;
+	color: #835da8;
+}
