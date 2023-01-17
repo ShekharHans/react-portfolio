@@ -1,4 +1,4 @@
-import { Route,  BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route,  Routes } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -13,7 +13,7 @@ import Projects from "./components/Project/Projects";
 function App() {
   return (
     <>
-    <Router basename='ReactPortfolio'>
+    
       <Routes>
         <Route exact path="/"  element={<Layout />}>
           <Route index element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/skills" element={<Skills />} />
         </Route>
       </Routes>
-      </Router>
+      
     </>
   )
 }
