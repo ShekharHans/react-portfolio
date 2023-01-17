@@ -5,7 +5,7 @@ import './index.scss'
 const Layout = () => {
   return (
       <div className="App">
-        <Sidebar />
+        <Sidebar  />
         <div className="page">
           <span className="tags top-tags-html" style={{top:'1%', marginLeft:'-25px'}}>&lt;html&gt;</span>
           <span className="tags top-tags" style={{marginTop:'12px'}}>&lt;body&gt;</span>
