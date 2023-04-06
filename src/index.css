@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+
 html {
 	font-size: 62.5%;
 }
@@ -9,6 +12,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: #1f2029;
 	overflow: hidden;
-	background: url(./assets/images/1.jpg);
-	
+	/* background: url(./assets/images/1.jpg); */
+	background: linear-gradient(180deg,
+			#010208 16.39%,
+			#010206 20.51%,
+			#040008 24.79%,
+			#010101 30.46%,
+			#010101 34.11%,
+			#010101 36.21%,
+			#010101);
 }

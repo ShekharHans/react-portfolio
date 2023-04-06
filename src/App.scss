@@ -1,6 +1,8 @@
 $primary-color: #00ff66;
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 // @import '~loaders.css/src/animations/pacman.scss';
 // @import '~loaders.css/src/animations/ball-spin-fade-loader.scss';
 
@@ -31,7 +33,19 @@ input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
 }
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-orbitron: Orbitron;
 
+  /* font sizes */
+  --font-size-xs-1: 11.1px;
+  --font-size-xs: 12px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gray: rgba(255, 255, 255, 0.85);
+}
 // .loader-hidden {
 //   display: none;
 // }

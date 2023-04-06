@@ -1,77 +1,105 @@
+import React from 'react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
 import AnimatedLetters from '../AnimatedLetters'
-// import LogoTitle from '../../assets/images/logo-s.png'
-// import Logo from './Logo'
-import myPic from '../../assets/images/img.jpg'
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+
 
 import './index.scss'
+import myPic from '../../assets/images/img.png'
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import LogoTitle from '../../assets/images/logo-s.png'
+// import Logo from './Logo'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = 'Shekhar'.split('')
-  const jobArray = 'Web Developer'.split('')
-  const interestArray = 'Web Designer'.split('')
-  const enthusiastArray = 'Coder'.split('')
+
+  const nameArray = ' Shekhar'.split('')
+
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    return setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 4000)
-    return () => clearTimeout(timer)
+    }, 3000)
   }, [])
-
   return (
     <>
-      <div className="container home-page">
-        <div className="text-zone" >
-          <h1>
-            <span className={letterClass} style={{fontFamily:'Abril Fatface'}}>H</span>
-            <span className={`${letterClass} _12`}style={{fontFamily:'Abril Fatface'}}>i,</span>
-            <br />
-            <span className={`${letterClass} _13`} style={{fontFamily:'Abril Fatface'}}>I</span>
-            <span className={`${letterClass} _14`} style={{fontFamily:'Abril Fatface'}}>'m</span>
-            &nbsp;
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              idx={15}
-              
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobArray}
-              idx={22}
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={interestArray}
-              idx={22}
-            />
+      <main>
+        <div className="main-container" style={{ display: "flex", justifyContent: "space-evenly" }}>
+          <Fade left>
+            <div className="first-section">
+              <div className="text-zone" style={{ left: '57%', marginTop: '-30px', top: "24%", width: "50rem" }}>
+                <h2>Hello!</h2>
+                <h1>
+                  I am
+                  <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={nameArray}
+                    idx={15}
+                  />
+                </h1>
+                <h1 style={{ color: "yellow", width: "60rem" }}>
+                  A Web Designer
+                </h1>
+              </div>
+              <div className="social-zone">
+                <ul>
+                  <li className='icon-1'>
+                    <a href="https://www.linkedin.com/in/shekhar-hans-560822246/">
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                  </li>
+                  <li className='icon-2'>
+                    <a href="https://github.com/ShekharHans">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  </li>
+                  <li className='icon-3'>
+                    <a href="https://www.facebook.com/shekhar.hans.148">
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                  </li>
+                  <li className='icon-4'>
+                    <a href="https://www.instagram.com/crazy_painter__/">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Fade>
+          <Zoom>
+            <div className="image-zone" style={{ zIndex: "-1" }}>
+              <img src={myPic} alt="Img" />
+            </div>
+          </Zoom>
+          <Fade right>
+            <div className="about-section">
+              <p className="about-p-text" style={{ fontSize: "15px" }}>
 
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={enthusiastArray}
-              idx={22}
-            />
-          </h1>
-          <h2>
-          Web Designer ★ Front-end Developer ★ Coder ★ Digital Painter
-          </h2>
-          <Link to="/contact" className="flat-button">
-            CONTACT ME
-          </Link>
-        </div>
-        <div>
-          <img className='box' src={myPic} width="24%" style={{marginLeft:'750px',marginTop:'120px',borderRadius:'50%',border: '2px solid' ,borderColor:'#2a3cad',boxSizing: 'border-box',padding:'20px', background: 'rgba(17, 24, 69, 0.33)'}}  alt="" />
-        </div>
-      </div>
+                Hi There, I’m Shekhar and i am Front-End Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. I am doing graduation in computer science from Meghnad Saha Institute of Technology,Kolkaka.
+                <br />
+                I'm a team player with outstanding communication skills and also I have knowledge about illustration, and most importantly, I'm enthusiastic at work.
+                <br />
+                I'm open to Job opportunities where I can grow, learn, and contribute. Please get in touch with me if you have a great opportunity that matches my qualifications and experience.
+                <br />
+              </p>
 
+              <Link to="/contact"><button className="contact-btn">
+                Contact Me
+              </button></Link>
+            </div>
+          </Fade>
+        </div>
+      </main>
     </>
   )
 }

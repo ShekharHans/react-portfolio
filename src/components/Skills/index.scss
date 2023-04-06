@@ -3,7 +3,8 @@
   float: right;
   width: 53%;
   height: 115%;
-  margin-top: -3%;
+  // margin-top: -3%;
+  z-index: -9999;
 
   .tagcloud {
     color: #00ffc3;
@@ -11,6 +12,7 @@
     font-size: 20px;
     font-weight: 650;
     margin: 10% auto;
+    z-index: -9999;
   }
   .tagcloud--item:hover {
     color: #ff00f2;

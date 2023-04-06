@@ -29,9 +29,9 @@ const Skills = () => {
           </h1>
           <div style={{ fontSize: ' 18px', fontFamily: 'La Belle Aurore', color: '#616161', marginTop: '20px' }}>&lt;p&gt;</div>
           <br />
-          <p style={{ fontFamily: 'Poppins', color: 'rgba(169, 122, 227, 0.75)',marginLeft:'10%' }}>
+          <p style={{ fontFamily: 'Poppins', color: '#fff',marginLeft:'10%' }}>
             Skills - Frontend Devlopment, Digital Art, Web Design, UI Designing <br /><br />
-            Language - HTML5, CSS3, JavaScript, c-c++, React Js, jQuery, Scss
+            Language - HTML5, CSS3, JavaScript, C-C++, React Js, jQuery, Scss
 <br /><br />
             Tools - GitHub, Linux, Figma, Canva, Adobe XD <br /><br />
             I'm also learning Back-End Development and looking forward to be a Full Stack Web Developer.

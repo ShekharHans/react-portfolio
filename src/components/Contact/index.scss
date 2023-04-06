@@ -1,5 +1,6 @@
   .contact-page {
     margin-left: 10%;
+    margin-top: 100px;
   }
 
   .contact-form {
@@ -50,24 +51,24 @@
       color: #fff;
       padding: 0 20px;
       box-sizing: border-box;
-      
-        &:focus {
-          box-shadow: none;
-          border-bottom: 2px solid #08fdd8;
-          transition: 0.3s ease all;
-          top: 0;
-          opacity: 1;
-          color: #8e44ad;
-          font-size: 15px;
-  
-          &:after {
-            visibility: visible;
-            width: 100%;
-            left: 0;
-  
-          }
+
+      &:focus {
+        box-shadow: none;
+        border-bottom: 2px solid #08fdd8;
+        transition: 0.3s ease all;
+        top: 0;
+        opacity: 1;
+        color: #8e44ad;
+        font-size: 15px;
+
+        &:after {
+          visibility: visible;
+          width: 100%;
+          left: 0;
+
         }
-      
+      }
+
     }
 
     textarea {
@@ -223,10 +224,21 @@
       }
     }
   }
-  .footer__copy{
-    position:absolute;
+
+  .contact-img {
+    left: 53%;
+    top: 10%;
+    position: relative;
+
+    img {
+      width: 80rem;
+    }
+  }
+
+  .footer__copy {
+    position: absolute;
     z-index: 1000;
-    bottom: 7%;
+    bottom: 11%;
     left: 42%;
     color: #4950579a;
   }
