@@ -8,7 +8,7 @@ import './index.css'
 // TODO:  Add mouse-trail, work page
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename=''>
+    <HashRouter basename='/'>
       <App />
     </HashRouter>
     ,
